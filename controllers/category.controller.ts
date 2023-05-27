@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Response } from 'express';
 import { AuthRequest } from '../middleware';
 import Category from '../models/category-model';
 import { ICategory } from '../types';

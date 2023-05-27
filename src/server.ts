@@ -1,8 +1,8 @@
 import express, { Request, Response } from 'express';
 import morgan from 'morgan';
+import categoryRoutes from '../routes/category.routes';
 import userRoutes from '../routes/user.routes';
 import connectToDatabase from './db';
-import categoryRoutes from '../routes/category.routes';
 
 const app = express();
 
