@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import morgan from 'morgan';
 import categoryRoutes from '../routes/category.routes';
+import taskRoutes from '../routes/task.routes';
 import userRoutes from '../routes/user.routes';
 import connectToDatabase from './db';
 
@@ -19,6 +20,7 @@ app.get('/ping', (req: Request, res: Response) => {
 app.use(morgan('common'));
 app.use('/user', userRoutes);
 app.use('/categories', categoryRoutes);
+app.use('/tasks', taskRoutes);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
