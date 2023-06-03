@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express, { Request, Response } from 'express';
 import morgan from 'morgan';
 import categoryRoutes from '../routes/category.routes';
@@ -8,6 +9,7 @@ import connectToDatabase from './db';
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 const PORT = 8888;
 
