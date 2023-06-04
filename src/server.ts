@@ -20,7 +20,7 @@ app.get('/ping', (req: Request, res: Response) => {
 });
 
 app.use(morgan('common'));
-app.use('/user', userRoutes);
+app.use('/users', userRoutes);
 app.use('/categories', categoryRoutes);
 app.use('/tasks', taskRoutes);
 
