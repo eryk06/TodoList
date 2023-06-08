@@ -8,6 +8,7 @@ import connectToDatabase from './db';
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
@@ -25,5 +26,5 @@ app.use('/categories', categoryRoutes);
 app.use('/tasks', taskRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
